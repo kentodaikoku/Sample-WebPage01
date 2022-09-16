@@ -5,7 +5,7 @@ body {
   color: #333;
   font-size: 0.875rem;
   min-height: 100vh;
-  /* position: relative; */
+  position: relative;
 }
 a {
   color: #333;
@@ -36,7 +36,6 @@ header h1 a {
   display: block;
 }
 
-
 /* header */
 header {
   width: 100%;
@@ -46,6 +45,8 @@ header {
   align-items: center;
   justify-content: space-between;
   position: fixed; /*header 固定*/
+  left: 0;
+  right: 0;
   z-index: 10 ;
 }
 
@@ -166,14 +167,25 @@ nav a {
   text-align: center;
 }
 
+.paging-num {
+  display: flex;
+  justify-content: center;
+}
+
+.paging-num li {
+  margin-right: 20px;
+}
+
+
+
 /* footer */
 footer {
   display: flex;
   justify-content: space-between;
-  /* position: absolute; */
-  /* bottom: 20px; */
-  /* left: 0; */
-  /* right: 0; */
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
 }
 
 footer .menu {
@@ -192,6 +204,28 @@ footer p {
 
 
 /* SP */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
+  .product-list {
+    display: flex;
+    justify-content: flex-start;
+  }
 
+  .product-list li {
+    width: 30%;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .product-list li {
+    width: 46%;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+  
+  footer p {
+    margin-top: 10px;
+  }
 }

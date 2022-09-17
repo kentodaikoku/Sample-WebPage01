@@ -1,3 +1,4 @@
+// ハンバーガーメニュー実装
 $(function() {
   $('.nav_btn').on('click', function() {
     if ($('header').hasClass('open')) {
@@ -12,6 +13,7 @@ $(function() {
   });
 });
 
+// ページネーション用表示実装
 function showNext() {
   let html = '<li>' + '<a href="item.html?item=13">' +
                 '<img src="img/item13.jpeg" alt="">' +
@@ -35,6 +37,4 @@ function showNext() {
               '</li>';
 
   $('.product-list').html(html);
-
 }
-

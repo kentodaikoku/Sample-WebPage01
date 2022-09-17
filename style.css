@@ -22,7 +22,7 @@ li {
   list-style: none;
 }
 
-/* 共通 */
+/* 共通(top, products,  */
 .wrapper {
   width: 100%;
   max-width: 1360px;
@@ -30,10 +30,16 @@ li {
   padding: 0 40px;
 }
 
-header h1 a {
-  width: 180px;
-  line-height: 1px;
-  display: block;
+/*  */
+.content {
+  padding-top: 120px;
+  padding-bottom: 160px;
+}
+
+.sub-title {
+  font-size: 0.875rem;
+  font-weight: normal;
+  margin-bottom: 30px;
 }
 
 /* header */
@@ -48,6 +54,12 @@ header {
   left: 0;
   right: 0;
   z-index: 10 ;
+}
+
+header h1 a {
+  width: 180px;
+  line-height: 1px;
+  display: block;
 }
 
 /* ハンバーガーメニュー(close) */
@@ -167,6 +179,7 @@ nav a {
   text-align: center;
 }
 
+/* products */
 .paging-num {
   display: flex;
   justify-content: center;
@@ -176,7 +189,91 @@ nav a {
   margin-right: 20px;
 }
 
+/* item */
+#item {
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
 
+#item .item-img {
+  width: 50%;
+}
+
+#item .item-contents {
+  width: 42%;
+}
+
+#item .item-contents p {
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+#item .item-contents dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-contents dt {
+  width: 33%;
+}
+
+.item-contents dd {
+  width: 67%;
+}
+
+/* about */
+#about {
+  max-width: 600px;
+}
+
+#about p {
+  margin-bottom: 30px;
+  line-height: 1.9;
+}
+
+/* company */
+#company {
+  max-width: 600px;
+}
+
+#company dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+#company dt {
+  width: 30%;
+  border-bottom: solid 1px #dcdbdb;
+  padding: 20px 10px;
+}
+
+#company dt:last-of-type {
+  border-bottom: none;
+}
+
+#company dd {
+  width: 70%;
+  border-bottom: solid 1px #dcdbdb;
+  padding: 20px 10px;
+}
+#company dd:last-of-type {
+  border-bottom: none;
+}
+
+#company .map {
+  /* グーグルマップをグレースケールにする */
+  filter: grayscale(1);
+}
+
+/* グーグルマップのサイズを設定 */
+#company .map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
 
 /* footer */
 footer {
@@ -220,6 +317,37 @@ footer p {
   .product-list li {
     width: 46%;
   }
+
+  /* company */
+  #company dl {
+    flex-direction: column;
+  }
+
+  #company dt {
+    width: 100%;
+    border-bottom: none;
+    padding-bottom: 5px;
+  }
+
+  #company dd {
+    width: 100%;
+    padding-top: 5px;
+  }
+
+/* item */
+#item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#item .item-img, #item .item-contents {
+  width: 100%;
+}
+
+.item-img {
+  margin-bottom: 30px;
+}
 
   footer {
     flex-direction: column;

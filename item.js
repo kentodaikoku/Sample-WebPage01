@@ -2,9 +2,9 @@ $(function() {
   // itempページにて該当商品を表示する実装（パラメータをもとに）
   let param = location.search.substring(1);
   let params = param.split("=");
-  console.log(param);
-  console.log(params);
-  console.log(params[1]);
+  // console.log(param);
+  // console.log(params);
+  // console.log(params[1]);
   let param_num = params[1];
   let img_ver = '';
   if (param_num < 9) {
